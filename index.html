@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إلى عشقي الأبدي - Basmala ❤️</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cairo:wght@400;600;700;800;900&family=Great+Vibes&family=Reem+Kufi:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Hearts & Stars Canvas -->
+  <canvas id="fx-canvas"></canvas>
+
+  <div class="container">
+    
+    <!-- Header -->
+    <header class="header">
+      <div class="love-badge">
+        <i class="fa-solid fa-heart-pulse"></i> مالكة قلبي وعشقي الأول والأخير
+      </div>
+      <h1 class="main-title">Basmala</h1>
+      <div class="sub-title">Basbousa & Basmoula ✨</div>
+    </header>
+
+    <!-- Main Love Card -->
+    <div class="glass-card main-card">
+      <div class="quote-icon"><i class="fa-solid fa-crown"></i></div>
+      <p class="hero-text">
+        يا أحلى <span class="highlight">بسبوسة</span> في المجرة دي كلها ❤️<br>
+        أنا مش بس بحبك.. أنا متيم بيكي وبضحكتك وعيونك وكل تفصيلة فيكي.<br>
+        إنتِ البداية لكل حاجة حلوة، وأحلى بسبوسة سكرها مظبوط خطفت قلبي وعقلي من أول ثانية!
+      </p>
+    </div>
+
+    <!-- Live Timer Section -->
+    <div class="glass-card timer-card">
+      <h3 class="section-title">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        بقالنا مع بعض بنحب بعض:
+      </h3>
+      <p class="timer-date">منذ التاريخ الأجمل: 24 أبريل 2024 ✨</p>
+      
+      <div class="timer-grid">
+        <div class="timer-box">
+          <span id="days">0</span>
+          <label>يوم</label>
+        </div>
+        <div class="timer-box">
+          <span id="hours">0</span>
+          <label>ساعة</label>
+        </div>
+        <div class="timer-box">
+          <span id="minutes">0</span>
+          <label>دقيقة</label>
+        </div>
+        <div class="timer-box">
+          <span id="seconds">0</span>
+          <label>ثانية</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Love Fingerprint Test -->
+    <div class="glass-card scanner-card">
+      <h3 class="section-title">
+        <i class="fa-solid fa-fingerprint"></i>
+        اختبار مقياس العشق والتطابق
+      </h3>
+      <p style="margin-bottom: 20px; color: #5c1d38; font-weight: 600;">اضغطي بـ إصبِعِك هنا يا بسبوسة عشان نقيس نسبة الحب!</p>
+      
+      <div class="fingerprint-btn" onclick="scanLove()">
+        <i class="fa-solid fa-fingerprint"></i>
+      </div>
+      
+      <div class="scan-result" id="scanResult">
+        <div class="percent" id="percentText">0%</div>
+        <div class="result-msg" id="resultMsg">جاري التحليل...</div>
+      </div>
+    </div>
+
+    <!-- Secret Messages Grid -->
+    <h3 class="section-title white-title">
+      <i class="fa-solid fa-envelope-open-text"></i>
+      رسائل سرية لـ بسمولة (اضغطي للاكتشاف)
+    </h3>
+
+    <div class="secret-grid">
+      <div class="secret-card" onclick="revealSecret(this, 'إنتِ مش بس حبيبتي.. إنتِ بنتي وصاحبتي وكل دنيتي ومفيش زيك اتنين! ❤️')">
+        <i class="fa-solid fa-gift"></i>
+        <span>السر الأول 🤫</span>
+      </div>
+
+      <div class="secret-card" onclick="revealSecret(this, 'ضحكتك دي بالنسبة لي أكسجين وبجد بتغير مود يومي كله في ثانية! 🥰')">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>السر الثاني ✨</span>
+      </div>
+
+      <div class="secret-card" onclick="revealSecret(this, 'لو لفت الدنيا كلها مش هلاقي أرق ولا أحن ولا أطعم من بسبوستي! 🍯')">
+        <i class="fa-solid fa-heart"></i>
+        <span>السر الثالث 💖</span>
+      </div>
+
+      <div class="secret-card" onclick="revealSecret(this, 'وعد مني هفضل أحبك وأعشقك وأغير عليكِ وأدللـك لحد آخر يوم في عمري! 💍')">
+        <i class="fa-solid fa-infinity"></i>
+        <span>السر الرابع ♾️</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS Link -->
+  <script src="script.js"></script>
+</body>
+</html>
